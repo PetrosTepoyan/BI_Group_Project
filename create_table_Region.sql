@@ -1,0 +1,5 @@
+DROP TABLE IF EXISTS Region;
+CREATE TABLE Region (
+  RegionID INT NOT NULL,
+  RegionDescription VARCHAR(255) NOT NULL
+);

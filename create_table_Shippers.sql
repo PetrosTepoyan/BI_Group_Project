@@ -1,0 +1,6 @@
+DROP TABLE IF EXISTS Shippers;
+CREATE TABLE Shippers (
+  ShipperID INT NOT NULL,
+  CompanyName VARCHAR(255) NOT NULL,
+  Phone VARCHAR(50)
+);
