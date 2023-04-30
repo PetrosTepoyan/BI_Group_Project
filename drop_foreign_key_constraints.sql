@@ -1,0 +1,10 @@
+ALTER TABLE Orders DROP CONSTRAINT FK_Orders_EmployeeID;
+ALTER TABLE Employees DROP CONSTRAINT FK_Employees_ReportsTo;
+ALTER TABLE OrderDetails DROP CONSTRAINT FK_OrderDetails_OrderID;
+ALTER TABLE OrderDetails DROP CONSTRAINT FK_OrderDetails_ProductID;
+ALTER TABLE Orders DROP CONSTRAINT FK_Orders_CustomerID;
+ALTER TABLE Orders DROP CONSTRAINT FK_Orders_ShipVia;
+ALTER TABLE Orders DROP CONSTRAINT FK_Orders_TerritoryID;
+ALTER TABLE Products DROP CONSTRAINT FK_Products_CategoryID;
+ALTER TABLE Products DROP CONSTRAINT FK_Products_SupplierID;
+ALTER TABLE Territories DROP CONSTRAINT FK_Territories_RegionID;
