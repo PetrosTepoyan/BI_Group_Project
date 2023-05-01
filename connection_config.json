@@ -3,5 +3,7 @@
     "server" : "localhost",
     "database" : "master",
     "username" : "sa",
-    "password" : "bigStrong1234Password!re"
+    "password" : "bigStrong1234Password!re",
+    "encrypt"  : "yes",
+    "trust"    : "yes"
 }

@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS Customers;
 CREATE TABLE Customers (
-  CustomerID INT NOT NULL,
+  CustomerID VARCHAR(10) NOT NULL,
   CompanyName VARCHAR(255),
   ContactName VARCHAR(255),
   ContactTitle VARCHAR(255),
