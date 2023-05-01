@@ -1,1 +1,0 @@
-USE [Orders_RELATIONAL_DB];

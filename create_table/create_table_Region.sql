@@ -1,5 +1,4 @@
-DROP TABLE IF EXISTS Region;
-CREATE TABLE Region (
+CREATE TABLE {db}.{schema}.Region (
   RegionID INT NOT NULL,
   RegionDescription VARCHAR(255) NOT NULL
 );

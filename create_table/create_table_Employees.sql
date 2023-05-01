@@ -1,5 +1,4 @@
-DROP TABLE IF EXISTS Employees;
-CREATE TABLE Employees (
+CREATE TABLE {db}.{schema}.Employees (
   EmployeeID INT NOT NULL,
   LastName VARCHAR(255),
   FirstName VARCHAR(255),

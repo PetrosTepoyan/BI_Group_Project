@@ -3,7 +3,21 @@ import json
 import time
 import os
 import pandas as pd
-import math
+
+from utils import __format_nan, __float_none
+
+TABLES = [
+    "Categories",
+    "Customers", 
+    "Employees", 
+    "Suppliers", 
+    "Products", 
+    "Region", 
+    "Shippers", 
+    "Territories",
+    "Orders",
+    "OrderDetails"
+]
 
 def connect():
     
@@ -25,47 +39,35 @@ def connect():
     
     return connection
 
-def load_query(query_name):
-    for script in os.listdir():
+def load_query(query_name, directory = None):
+    for script in os.listdir(directory):
+        append = "" if directory is None else directory + "/"
         if query_name in script:
-            with open(script, 'r') as script_file:
+            with open(append + script, 'r') as script_file:
                 sql_script = script_file.read()
             break
     return sql_script
 
-def execute(filename, cursor, by_line = False, ignore_errors = False, log = False):
-    with open(filename, "r") as file:
-        if by_line:
-            lines = file.readlines()
-            for ind, line in enumerate(lines):
-                try:
-                    cursor.execute(line)
-                    if log:
-                        print(line)
-                except ProgrammingError as error:
-                    if not ignore_errors:
-                        print("ERROR ON LINE", ind, line)
-                        raise error
-        else:
-            content = file.read()
-            try:
-                cursor.execute(content)
-            except ProgrammingError as error:
-                if ignore_errors:
-                    pass
-                else:
-                    print(content)
-                    raise error
+def create_database(cursor, db):
+    query = load_query("database_creation.sql")
+    cursor.execute(query)
+
+def drop_constraints(cursor, db, schema):
+    query = load_query("add_primary_key_constraints.sql", "constraints").format(db = db, schema = schema)
+    try:
+        cursor.execute(query)
+    except Exception:
+        pass
 
 def drop_table(cursor, table_name, db, schema):
-    drop_table_script = load_query('drop_table').format(db=db, schema=schema, table=table_name)
+    drop_table_script = load_query('drop_table', None).format(db=db, schema=schema, table=table_name)
     cursor.execute(drop_table_script)
     cursor.commit()
     print("The {schema}.{table_name} table from the database {db} has been dropped".format(db=db, schema=schema,
                                                                                        table_name=table_name))
 
 def create_table(cursor, table_name, db, schema):
-    create_table_script = load_query('create_table_{}'.format(table_name)).format(db=db, schema=schema)
+    create_table_script = load_query('create_table_{}'.format(table_name), "create_table").format(db=db, schema=schema)
     cursor.execute(create_table_script)
     cursor.commit()
     print("The {schema}.{table_name} table from the database {db} has been created".format(db=db, schema=schema,
@@ -75,11 +77,11 @@ def insert_into_table(cursor, raw_data, table, db, schema):
     print(f"Inserting into {table}...")
     df = pd.read_excel(raw_data, sheet_name = table)
 
-    insert_into_table_script = load_query('insert_into_{}'.format(table)).format(db = db, schema = schema)
+    insert_into_table_script = load_query('insert_into_{}'.format(table), "insert_into").format(db = db, schema = schema)
 
     for index, row in df.iterrows():
         params = list(row)
-        params = format_nan(params)
+        params = __format_nan(params)
         try:
             cursor.execute(insert_into_table_script, params)
             cursor.commit()
@@ -87,13 +89,12 @@ def insert_into_table(cursor, raw_data, table, db, schema):
             print(index, err)
 
     print(f"{len(df)} rows have been inserted into the {db}.{schema}.{table} table\n")
-        
 
-def format_nan(array):
-    return [__float_none(a) for a in array]
+def set_constraints(cursor, db, schema):
+    query = load_query("add_primary_key_constraints.sql", "constraints").format(db = db, schema = schema)
+    cursor.execute(query)
+    print("Added primary key constraints")
 
-def __float_none(x):
-    if isinstance(x, float) and math.isnan(x):
-        return None
-    else:
-        return x
+    query = load_query("add_foreign_key_constraints.sql", "constraints").format(db = db, schema = schema)
+    cursor.execute(query)
+    print("Added foriegn key constraints")

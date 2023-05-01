@@ -1,5 +1,4 @@
-DROP TABLE IF EXISTS Orders;
-CREATE TABLE Orders (
+CREATE TABLE {db}.{schema}.Orders (
   OrderID INT NOT NULL,
   CustomerID VARCHAR(10),
   EmployeeID INT,

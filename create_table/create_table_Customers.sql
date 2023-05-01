@@ -1,15 +1,13 @@
-DROP TABLE IF EXISTS Suppliers;
-CREATE TABLE Suppliers (
-  SupplierID INT NOT NULL,
+CREATE TABLE {db}.{schema}.Customers (
+  CustomerID VARCHAR(10) NOT NULL,
   CompanyName VARCHAR(255),
   ContactName VARCHAR(255),
   ContactTitle VARCHAR(255),
   Address VARCHAR(255),
   City VARCHAR(255),
   Region VARCHAR(255),
-  PostalCode VARCHAR(50),
+  PostalCode VARCHAR(20),
   Country VARCHAR(255),
   Phone VARCHAR(50),
-  Fax VARCHAR(50),
-  HomePage TEXT
+  Fax VARCHAR(50)
 );

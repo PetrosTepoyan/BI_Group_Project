@@ -1,5 +1,4 @@
-DROP TABLE IF EXISTS Products;
-CREATE TABLE Products (
+CREATE TABLE {db}.{schema}.Products (
   ProductID INT NOT NULL,
   ProductName VARCHAR(255) NOT NULL,
   SupplierID INT,

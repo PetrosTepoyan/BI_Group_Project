@@ -1,5 +1,4 @@
-DROP TABLE IF EXISTS OrderDetails;
-CREATE TABLE OrderDetails (
+CREATE TABLE {db}.{schema}.OrderDetails (
   OrderID INT NOT NULL,
   ProductID INT NOT NULL,
   UnitPrice INT,

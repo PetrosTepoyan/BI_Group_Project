@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import math
 
 TABLES = [
     "Categories",
@@ -13,6 +14,19 @@ TABLES = [
     "Orders",
     "OrderDetails"
 ]
+
+def generate_insert_files(data_xlsx, sheet_name):
+    df = pd.read_excel(data_xlsx, sheet_name = sheet_name)
+    insert = __dataframe_to_sql_insert(df, sheet_name)
+    with open(f"insert_into_{sheet_name}.sql", "w") as f:
+        f.write(insert)
+
+def parse_config(config_file):
+    with open(f"{config_file}.json", "r") as file:
+        data = json.load(file)
+        return data
+    return None
+
 
 def __format_value(value):
     if value is None or value == np.nan:
@@ -45,14 +59,11 @@ def __dataframe_to_sql_insert(dataframe, table_name):
     
     return '\n'.join(insert_statements)
 
-def generate_insert_files(data_xlsx, sheet_name):
-    df = pd.read_excel(data_xlsx, sheet_name = sheet_name)
-    insert = __dataframe_to_sql_insert(df, sheet_name)
-    with open(f"insert_into_{sheet_name}.sql", "w") as f:
-        f.write(insert)
+def __format_nan(array):
+    return [__float_none(a) for a in array]
 
-def parse_config(config_file):
-    with open(f"{config_file}.json", "r") as file:
-        data = json.load(file)
-        return data
-    return None
+def __float_none(x):
+    if isinstance(x, float) and math.isnan(x):
+        return None
+    else:
+        return x
