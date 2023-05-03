@@ -1,0 +1,17 @@
+{
+    "raw_data" : "raw_data_source.xlsx",
+    "schema" : "dbo",
+    "db" : "Orders_RELATIONAL_DB",
+    "TABLES" : [
+        "Categories",
+        "Customers", 
+        "Employees", 
+        "Suppliers", 
+        "Products", 
+        "Region", 
+        "Shippers", 
+        "Territories",
+        "Orders",
+        "OrderDetails"
+    ]
+}

@@ -1,6 +1,8 @@
 import pandas as pd
 import numpy as np
 import math
+import json
+import platform
 
 TABLES = [
     "Categories",
@@ -14,6 +16,43 @@ TABLES = [
     "Orders",
     "OrderDetails"
 ]
+
+def get_connection_string():
+    running_system = platform.system()
+    if running_system == "Darwin" or running_system == "Linux":
+        config = parse_config("connection_configs/posix_connection_config")
+
+        DRVIER = f"DRIVER=" + config.get("driver")
+        SERVER = f"SERVER=" + config.get("server")
+        DATABASE = f"DATABASE=" + config.get("database")
+        UID = f"UID=" + config.get("username")
+        PWD = f"PWD=" + config.get("password")
+        ENCRYPT = "ENCRYPT=yes"
+        TRUST = "TrustServerCertificate=yes"
+
+        connection_params = [DRVIER, SERVER, DATABASE, TRUST, UID, PWD]
+        connection_string = ";".join(connection_params)
+        return connection_string
+
+    elif running_system == "Windows":
+        config = parse_config("connection_configs/windows_connection_config")
+
+        DRVIER = f"DRIVER=" + config.get("driver")
+        SERVER = f"SERVER=" + config.get("server")
+        DATABASE = f"DATABASE=" + config.get("database")
+        TRUSTED_CONNECTION = "Trusted_Connection=" + config.get("trusted_connection") 
+
+        connection_params = [DRVIER, SERVER, DATABASE, TRUSTED_CONNECTION, UID, PWD]
+        connection_string = ";".join(connection_params)
+        return connection_string
+
+    else:
+        print("Unknown running system:", running_system)
+        return None
+    
+
+    
+
 
 def generate_insert_files(data_xlsx, sheet_name):
     df = pd.read_excel(data_xlsx, sheet_name = sheet_name)

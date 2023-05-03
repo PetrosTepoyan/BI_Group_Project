@@ -1,21 +1,27 @@
 import tasks
+from utils import parse_config
 
 if __name__ == "__main__":
 
-    db = "Orders_RELATIONAL_DB"
-    schema = "dbo"
-    raw_data = "raw_data_source.xlsx"
+    config = parse_config("config")
+
+    db = config.get("db")
+    schema = config.get("schema")
+    raw_data = config.get("raw_data")
+    TABLES = config.get("TABLES")
 
     conn_ER = tasks.connect()
 
     tasks.create_database(conn_ER, db)
 
-    for table in tasks.TABLES:
-        tasks.drop_constraints(conn_ER, db, schema)
-        tasks.drop_table(conn_ER, table, db, schema)
+    tasks.drop_constraints_if_exist(conn_ER, db, schema)
+
+    for table in TABLES:
+        tasks.drop_table_if_exists(conn_ER, table, db, schema)
         tasks.create_table(conn_ER, table, db, schema)
         tasks.insert_into_table(conn_ER, raw_data, table, db, schema)
-        tasks.set_constraints(conn_ER, db, schema)
+
+    tasks.set_constraints(conn_ER, db, schema)
 
     conn_ER.close()
 

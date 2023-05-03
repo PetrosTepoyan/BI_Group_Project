@@ -4,37 +4,11 @@ import time
 import os
 import pandas as pd
 
-from utils import __format_nan, __float_none
-
-TABLES = [
-    "Categories",
-    "Customers", 
-    "Employees", 
-    "Suppliers", 
-    "Products", 
-    "Region", 
-    "Shippers", 
-    "Territories",
-    "Orders",
-    "OrderDetails"
-]
+from utils import __format_nan, __float_none, get_connection_string
 
 def connect():
     
-    with open('connection_config.json', 'r') as f:
-        config = json.load(f)
-    
-    DRVIER = f"DRIVER=" + config.get("driver")
-    SERVER = f"SERVER=" + config.get("server")
-    DATABASE = f"DATABASE=" + config.get("database")
-    UID = f"UID=" + config.get("username")
-    PWD = f"PWD=" + config.get("password")
-    ENCRYPT = "ENCRYPT=yes"
-    TRUST = "TrustServerCertificate=yes"
-
-    connection_params = [DRVIER, SERVER, DATABASE, ENCRYPT, TRUST, UID, PWD]
-    connection_string = ";".join(connection_params)
-    
+    connection_string = get_connection_string()
     connection = pyodbc.connect(connection_string, autocommit = True)
     
     return connection
@@ -52,14 +26,11 @@ def create_database(cursor, db):
     query = load_query("database_creation.sql")
     cursor.execute(query)
 
-def drop_constraints(cursor, db, schema):
-    query = load_query("add_primary_key_constraints.sql", "constraints").format(db = db, schema = schema)
-    try:
-        cursor.execute(query)
-    except Exception:
-        pass
+def drop_constraints_if_exist(cursor, db, schema):
+    query = load_query("drop_foreign_key_constraints.sql", "constraints").format(db = db, schema = schema)
+    cursor.execute(query)
 
-def drop_table(cursor, table_name, db, schema):
+def drop_table_if_exists(cursor, table_name, db, schema):
     drop_table_script = load_query('drop_table', None).format(db=db, schema=schema, table=table_name)
     cursor.execute(drop_table_script)
     cursor.commit()
@@ -82,11 +53,9 @@ def insert_into_table(cursor, raw_data, table, db, schema):
     for index, row in df.iterrows():
         params = list(row)
         params = __format_nan(params)
-        try:
-            cursor.execute(insert_into_table_script, params)
-            cursor.commit()
-        except Exception as err:
-            print(index, err)
+        
+        cursor.execute(insert_into_table_script, params)
+        cursor.commit()
 
     print(f"{len(df)} rows have been inserted into the {db}.{schema}.{table} table\n")
 
@@ -98,3 +67,10 @@ def set_constraints(cursor, db, schema):
     query = load_query("add_foreign_key_constraints.sql", "constraints").format(db = db, schema = schema)
     cursor.execute(query)
     print("Added foriegn key constraints")
+
+
+def update_dim_table(cursor, table_name, db, schema):
+    pass
+
+def update_fact_table(cursor, table_name, db, schema):
+    pass
