@@ -44,36 +44,36 @@ GO
 
 -- Testing
 --Insert records into target table
-INSERT INTO dim_Region
-VALUES
-   (1, '1', 'Kentron'),
-   (2, '2', 'Ajapnyak'),
-   (3, '3', 'Kentron'),
-   (4, '4', 'Erebuni')
-GO
-SELECT * FROM dim_Region;
+-- INSERT INTO dim_Region
+-- VALUES
+--    (1, '1', 'Kentron'),
+--    (2, '2', 'Ajapnyak'),
+--    (3, '3', 'Kentron'),
+--    (4, '4', 'Erebuni')
+-- GO
+-- SELECT * FROM dim_Region;
 
-EXEC dbo.Region_SCD1_ETL;
+-- EXEC dbo.Region_SCD1_ETL;
 
-SELECT * FROM dim_Region_SCD1;
+-- SELECT * FROM dim_Region_SCD1;
 
-INSERT INTO dim_Region
-VALUES
-   (5, '5', 'Erebuni')
-GO
+-- INSERT INTO dim_Region
+-- VALUES
+--    (5, '5', 'Erebuni')
+-- GO
 
-Update dim_Region
-SET RegionDescription = 'Zeytun' 
-WHERE RegionID = '2';
+-- Update dim_Region
+-- SET RegionDescription = 'Zeytun' 
+-- WHERE RegionID = '2';
 
-EXEC dbo.Region_SCD1_ETL;
+-- EXEC dbo.Region_SCD1_ETL;
 
-SELECT * FROM dim_Region_SCD1;
+-- SELECT * FROM dim_Region_SCD1;
 
-DELETE FROM dim_Region
-WHERE RegionID = '5';
+-- DELETE FROM dim_Region
+-- WHERE RegionID = '5';
 
-EXEC dbo.Region_SCD1_ETL;
+-- EXEC dbo.Region_SCD1_ETL;
 
-SELECT * FROM dim_Region_SCD1;
+-- SELECT * FROM dim_Region_SCD1;
 

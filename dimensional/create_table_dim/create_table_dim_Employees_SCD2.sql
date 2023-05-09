@@ -1,11 +1,5 @@
-/*
-	CREATING A DESTINATION TABLE
-*/
-DROP TABLE IF EXISTS [dbo].[dim_employees_SCD2]; 
-GO
-
-CREATE TABLE [dbo].[dim_employees_SCD2](
-EmployeeSK int IDENTITY(1,1) NOT NULL,
+CREATE TABLE {db}.{schema}.dim_Employees_SCD2(
+EmployeeID_SK int IDENTITY(1,1) NOT NULL,
 BusinessKey int NOT NULL,
 LastName nvarchar(50),
 FirstName nvarchar(50),

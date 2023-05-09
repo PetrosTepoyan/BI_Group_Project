@@ -13,5 +13,15 @@
         "Territories",
         "Orders",
         "OrderDetails"
-    ]
+    ],
+    "SCD" : {
+        "Categories" : "SCD3",
+        "Customers" : "SCD3",
+        "Employees" : "SCD2",
+        "Products" : "SCD4",
+        "Region" : "SCD1_with_delete",
+        "Shippers" : "SCD3",
+        "Suppliers" : "SCD1_with_delete",
+        "Territories" : "SCD3"
+    }
 }

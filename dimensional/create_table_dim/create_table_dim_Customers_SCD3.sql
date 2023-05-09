@@ -2,12 +2,12 @@
 	CREATING A DESTINATION TABLE
 */
 
-DROP TABLE IF EXISTS [dbo].[dim_customers_SCD3];
+DROP TABLE IF EXISTS {db}.{schema}.[dim_customers_SCD3];
 GO
 
 CREATE TABLE dbo.dim_customers_SCD3 (
-	CustomerSK int IDENTITY(1,1) PRIMARY KEY,
-	CustomerNK INT NOT NULL,
+	CustomerID_SK int IDENTITY(1,1) PRIMARY KEY,
+	CustomerID_NK INT NOT NULL,
 	ContactName varchar(50),
 	ContactTitle varchar(255),
 	[ContactTitle_Prev1] [varchar](50) NULL,
