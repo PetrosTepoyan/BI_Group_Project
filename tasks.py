@@ -3,24 +3,33 @@ import json
 import time
 import os
 import pandas as pd
+import logging
 
 import utils
 
 from utils import __format_nan, __float_none
+
+
+logging.basicConfig(filename='sample.log', level=logging.DEBUG,
+                    format='%(asctime)s:%(levelname)s:%(message)s')
 
 def connect_to(database):
 
     connection_string = utils.get_connection_string(database)
     print("Connection string:", connection_string)
     print("Connecting...", end = "\r")
+    logging.info("Connecting to database")
+    logging.info("Connection string: {}".format(connection_string))
 
     try:
         connection = pyodbc.connect(connection_string, autocommit = True)
         print("Connected    \n")
+        logging.info("Connected to database")
         return connection
 
     except Exception as error:
         print("Failed to connect")
+        logging.error("Failed to connect to database with error: {}".format(error))
         raise error
 
 def load_query(query_name, directory = None):
@@ -36,11 +45,13 @@ def drop_database_if_exists(cursor):
     query = load_query("database_drop.sql")
     cursor.execute(query)
     print("Dropped databases")
+    logging.info("Dropped databases")
 
 def create_database(cursor):
     query = load_query("database_creation.sql")
     cursor.execute(query)
     print("Created databases")
+    logging.info("Created databases")
 
 def drop_constraints_if_exist(cursor, db, schema):
     query = load_query("drop_foreign_key_constraints.sql", "constraints").format(db = db, schema = schema)
@@ -55,13 +66,18 @@ def drop_table_if_exists(cursor, table_name, db, schema):
     cursor.commit()
     print("The {schema}.{table_name} table from the database {db} has been dropped".format(db=db, schema=schema,
                                                                                        table_name=table_name))
+    logging.info("The {schema}.{table_name} table from the database {db} has been dropped".format(db=db, schema=schema,
+                                                                                                  table_name=table_name)) 
 
 def create_table(cursor, table_name, db, schema):
     create_table_script = load_query('create_table_{}'.format(table_name), "create_table").format(db=db, schema=schema)
+
     cursor.execute(create_table_script)
     cursor.commit()
     print("The {schema}.{table_name} table from the database {db} has been created".format(db=db, schema=schema,
                                                                                            table_name=table_name))
+    logging.info("The {schema}.{table_name} table from the database {db} has been created".format(db=db, schema=schema,
+                                                                                                    table_name=table_name))
 
 def insert_into_table(cursor, raw_data, table, db, schema):
     print(f"Inserting into {table}...")
@@ -82,10 +98,12 @@ def set_constraints(cursor, db, schema):
     query = load_query("add_primary_key_constraints.sql", "constraints").format(db = db, schema = schema)
     cursor.execute(query)
     print("Added primary key constraints")
+    logging.info("Added primary key constraints")
 
     query = load_query("add_foreign_key_constraints.sql", "constraints").format(db = db, schema = schema)
     cursor.execute(query)
     print("Added foriegn key constraints")
+    logging.info("Added foriegn key constraints")
 
 def create_dim_table(cursor, table_name, db, schema):
     create_table_script = load_query('create_table_dim_{}'.format(table_name), "dimensional/create_table_dim").format(db=db, schema=schema)
@@ -93,6 +111,9 @@ def create_dim_table(cursor, table_name, db, schema):
     cursor.commit()
     print("The {schema}.{table_name} table from the database {db} has been created".format(db=db, schema=schema,
                                                                                            table_name=table_name))
+    logging.info("The {schema}.{table_name} table from the database {db} has been created".format(db=db, schema=schema,
+                                                                                                    table_name=table_name))
+    
 
 def create_dim_table(cursor, table_name, scd_type, db, schema):
     create_table_script = load_query('create_table_dim_{}_{}'.format(table_name, scd_type), "dimensional/create_table_dim").format(db=db, schema=schema)
@@ -100,6 +121,7 @@ def create_dim_table(cursor, table_name, scd_type, db, schema):
     cursor.commit()
 
     print("The {schema}.dim_{table_name}_{scd_type} table from the database {db} has been created\n".format(db=db, schema=schema, scd_type = scd_type, table_name=table_name))
+    logging.info("The {schema}.dim_{table_name}_{scd_type} table from the database {db} has been created\n".format(db=db, schema=schema, scd_type = scd_type, table_name=table_name))
 
 def drop_dim_table_if_exists(cursor, table_name, scd_type, db, schema):
     table_name_full = "dim_" + table_name + "_" + scd_type
@@ -107,6 +129,7 @@ def drop_dim_table_if_exists(cursor, table_name, scd_type, db, schema):
     cursor.execute(drop_table_script)
     cursor.commit()
     print("The {schema}.{table_name_full} table from the database {db} has been dropped".format(db=db, schema=schema, table_name_full=table_name_full))
+    logging.info("The {schema}.{table_name_full} table from the database {db} has been dropped".format(db=db, schema=schema, table_name_full=table_name_full))
 
 def update_dim_table(cursor, table_name, scd_type, db_dim, db_rel, schema_dim, schema_rel):
     update_dim_table_script = load_query(
@@ -114,10 +137,12 @@ def update_dim_table(cursor, table_name, scd_type, db_dim, db_rel, schema_dim, s
     ).format(db_dim = db_dim, db_rel = db_rel, schema_dim = schema_dim, schema_rel = schema_rel)
     
     print(f"Executing {table_name}_{scd_type}_ETL...")
+    logging.info(f"Executing {table_name}_{scd_type}_ETL...")
     cursor.execute(update_dim_table_script)
     cursor.commit()
 
     print(f"Updated dim table {table_name}_{scd_type}\n")
+    logging.info(f"Updated dim table {table_name}_{scd_type}\n")
 
 def create_fact_table(cursor, table_name, db, schema):
     create_fact_table_script = load_query(
@@ -125,11 +150,13 @@ def create_fact_table(cursor, table_name, db, schema):
     ).format(db_dim = db_dim, db_rel = db_rel, schema_dim = schema_dim, schema_rel = schema_rel)
     
     print(f"Executing {table_name}_{scd_type}_ETL...")
+    logging.info(f"Executing {table_name}_{scd_type}_ETL...")
     cursor.execute(update_dim_table_script)
     cursor.commit()
 
     print(f"Updated dim table {table_name}_{scd_type}\n")
+    logging.info(f"Updated dim table {table_name}_{scd_type}\n")
 
 
-def update_fact_table(cursor, table_name, db, schema):
+# def update_fact_table(cursor, table_name, db, schema):
     

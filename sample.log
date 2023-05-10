@@ -1,0 +1,3 @@
+2023-05-10 17:06:42,859:INFO:Connecting to database
+2023-05-10 17:06:42,859:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_RELATIONAL_DB;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 17:07:12,971:ERROR:Failed to connect to database with error: ('HYT00', '[HYT00] [Microsoft][ODBC Driver 18 for SQL Server]Login timeout expired (0) (SQLDriverConnect)')
