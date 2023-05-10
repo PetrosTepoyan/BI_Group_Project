@@ -1,4 +1,6 @@
 .ipynb_checkpoints/
 venv/
 .idea/
-
+cluster_log
+__pycache__/
+.ipynb_checkpoints/
