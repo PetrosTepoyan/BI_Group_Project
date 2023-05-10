@@ -1,6 +1,7 @@
-merge into {db_dim}.{schema_dim}.fact_Orders AS DST
-using (
-    select order_details.*, orders.*, dim_prod.*, dim_cat.*, dim_emp.*, dim_shp.*, dim_ter.*
+insert into {db_dim}.{schema_dim}.fact_Orders
+{fact_Orders.columns...}
+(
+    select {fact_Orders.columns...} dim_prod.ProductID_SK, dim_emp.EmployeeID_SK
     
     from {db_rel}.{schema_rel}.OrderDetails as order_details
 
@@ -8,24 +9,20 @@ using (
         on order_details.OrderID = orders.OrderID -- IDSHERE
 
     left join {db_dim}.{schema_dim}.dim_Products_SCD4 as dim_prod
-        on order_details.ProductID = dim_prod.BusinessKey -- IDSHERE
+        on order_details.ProductID = dim_prod.BusinessKey -- CORRECT
 
-    left join {db_dim}.{schema_dim}.dim_Categories_SCD3 as dim_cat 
-        on dim_cat.CategoryID_NK = order_details.CategoryID
+    -- left join {db_dim}.{schema_dim}.dim_Categories_SCD3 as dim_cat 
+    --     on dim_cat.CategoryID_NK = order_details.CategoryID
 
     left join {db_dim}.{schema_dim}.dim_Employees_SCD2 as dim_emp
-        on dim_emp.EmployeeID_SK = DST.EmployeeID_SK_FK
+        on orders.EmployeeID_FK = dim_emp.BusinessKey -- CORRECT
 
     left join {db_dim}.{schema_dim}.dim_Shippers_SCD3 as dim_shp 
-        on dim_shp.ShipViaID_SK = DST.ShipViaID_SK_FK
+        on dim_shp.ShipViaID_SK = ShipViaID_SK_FK
 
     left join {db_dim}.{schema_dim}.dim_Territories_SCD3 as dim_ter
-        on dim_ter.TerritoryID_SK = DST.TerritoryID_SK_FK
-    
-) AS SRC
-on (DST.Customer_ID_SK_FK = SRC.Customer_ID_SK)
-when not matched
-insert into 
+        on dim_ter.TerritoryID_SK = TerritoryID_SK_FK
+)
 
 -- create table fact_Orders (
 -- ID_SK int IDENTITY(1, 1) primary key,

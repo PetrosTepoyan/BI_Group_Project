@@ -18,9 +18,7 @@ CategoryID_SK_FK int foreign key references dim_Category_SCD3(CategoryID_SK),
 CustomerID_SK_FK int foreign key references dim_Customers_SCD3(CustomerID_SK),
 EmployeeID_SK_FK int foreign key references dim_Employees_SCD2(EmployeeID_SK),
 ProductID_SK_FK int foreign key references dim_Products_SCD4(ProductID_SK),
-RegionID_SK_FK int foreign key references dim_Region_SCD1_with_delete(RegionID_SK),
 ShipViaID_SK_FK int foreign key references dim_Shippers_SCD3(ShipperID_SK),
-SupplierID_SK int foreign key references dim_Suppliers_SCD1_with_delete(SupplierID_SK)
 TerritoryID_SK_FK int foreign key references dim_Territories_SCD3(TerritoryID_SK),
 );
 

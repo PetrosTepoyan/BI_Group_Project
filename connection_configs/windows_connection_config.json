@@ -1,6 +1,0 @@
-{
-    "driver" : "ODBC Driver 17 for SQL Server",
-    "server" : "localhost",
-    "database" : "master",
-    "trusted_connection": "yes"
-}
