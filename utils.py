@@ -3,52 +3,75 @@ import numpy as np
 import math
 import json
 import platform
+import configparser
 
-TABLES = [
-    "Categories",
-    "Customers", 
-    "Employees", 
-    "Suppliers", 
-    "Products", 
-    "Region", 
-    "Shippers", 
-    "Territories",
-    "Orders",
-    "OrderDetails"
-]
+def parse_config(config_file):
+    with open(f"{config_file}.json", "r") as file:
+        data = json.load(file)
+        return data
+    return None
 
-def get_connection_string():
-    running_system = platform.system()
-    if running_system == "Darwin" or running_system == "Linux":
-        config = parse_config("connection_configs/posix_connection_config")
+# Util to read the configuration file
+def get_sql_config(filename, database):
+     cf = configparser.ConfigParser()
+     cf.read (filename) #Read configuration file
+     # Read corresponding file parameters
+     _driver = cf.get(database,"DRIVER")
+     _server = cf.get(database,"Server")
+     _database = cf.get(database,"Database")
+     _trusted_connection = cf.get(database,"Trusted_Connection")
+     _username = cf.get(database,"Username")
+     _password = cf.get(database,"Password")
+     _encrypt = cf.get(database,"Encrypt")
+     return _driver, _server,_database,_trusted_connection, _username,_password,_encrypt
 
-        DRVIER = f"DRIVER=" + config.get("driver")
-        SERVER = f"SERVER=" + config.get("server")
-        DATABASE = f"DATABASE=" + config.get("database")
-        UID = f"UID=" + config.get("username")
-        PWD = f"PWD=" + config.get("password")
-        ENCRYPT = "ENCRYPT=yes"
-        TRUST = "TrustServerCertificate=yes"
+def get_connection_string(database):
 
-        connection_params = [DRVIER, SERVER, DATABASE, TRUST, UID, PWD]
-        connection_string = ";".join(connection_params)
-        return connection_string
+    driver, server, database, trusted_connection, username, password, encrypt = get_sql_config("sql_server_config.cfg", database)
 
-    elif running_system == "Windows":
-        config = parse_config("connection_configs/windows_connection_config")
+    DRVIER = f"DRIVER=" + driver
+    SERVER = f"SERVER=" + server
+    DATABASE = f"DATABASE=" + database
+    UID = f"UID=" + username
+    PWD = f"PWD=" + password
+    ENCRYPT = f"ENCRYPT={encrypt}"
+    TRUST = f"TrustServerCertificate={trusted_connection}"
 
-        DRVIER = f"DRIVER=" + config.get("driver")
-        SERVER = f"SERVER=" + config.get("server")
-        DATABASE = f"DATABASE=" + config.get("database")
-        TRUSTED_CONNECTION = "Trusted_Connection=" + config.get("trusted_connection") 
+    connection_params = [DRVIER, SERVER, DATABASE, TRUST, UID, PWD]
+    connection_string = ";".join(connection_params)
+    return connection_string
 
-        connection_params = [DRVIER, SERVER, DATABASE, TRUSTED_CONNECTION, UID, PWD]
-        connection_string = ";".join(connection_params)
-        return connection_string
+    # running_system = platform.system()
+    # if running_system == "Darwin" or running_system == "Linux":
+    #     config = parse_config("connection_configs/posix_connection_config")
 
-    else:
-        print("Unknown running system:", running_system)
-        return None
+        # DRVIER = f"DRIVER=" + config.get("driver")
+        # SERVER = f"SERVER=" + config.get("server")
+        # DATABASE = f"DATABASE=" + config.get("database")
+        # UID = f"UID=" + config.get("username")
+        # PWD = f"PWD=" + config.get("password")
+        # ENCRYPT = "ENCRYPT=yes"
+        # TRUST = "TrustServerCertificate=yes"
+
+        # connection_params = [DRVIER, SERVER, DATABASE, TRUST, UID, PWD]
+        # connection_string = ";".join(connection_params)
+        # return connection_string
+
+    # elif running_system == "Windows":
+    #     config = parse_config("connection_configs/windows_connection_config")
+
+    #     DRVIER = f"DRIVER=" + config.get("driver")
+    #     SERVER = f"SERVER=" + config.get("server")
+    #     DATABASE = f"DATABASE=" + config.get("database")
+    #     TRUSTED_CONNECTION = "Trusted_Connection=" + config.get("trusted_connection") 
+
+    #     connection_params = [DRVIER, SERVER, DATABASE, TRUSTED_CONNECTION, UID, PWD]
+    #     connection_string = ";".join(connection_params)
+    #     return connection_string
+
+    # else:
+    #     print("Unknown running system:", running_system)
+    #     return None
     
 
     
@@ -59,12 +82,6 @@ def generate_insert_files(data_xlsx, sheet_name):
     insert = __dataframe_to_sql_insert(df, sheet_name)
     with open(f"insert_into_{sheet_name}.sql", "w") as f:
         f.write(insert)
-
-def parse_config(config_file):
-    with open(f"{config_file}.json", "r") as file:
-        data = json.load(file)
-        return data
-    return None
 
 
 def __format_value(value):

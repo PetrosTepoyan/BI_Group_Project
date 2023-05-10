@@ -1,0 +1,1 @@
+EXEC Region_SCD1_with_delete_ETL;

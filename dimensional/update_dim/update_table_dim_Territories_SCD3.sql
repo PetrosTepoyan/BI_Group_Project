@@ -1,0 +1,1 @@
+EXEC Territories_SCD3_ETL;

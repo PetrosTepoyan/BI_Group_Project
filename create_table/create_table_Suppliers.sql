@@ -10,5 +10,5 @@ CREATE TABLE {db}.{schema}.Suppliers (
   Country VARCHAR(255),
   Phone VARCHAR(50),
   Fax VARCHAR(50),
-  HomePage TEXT
+  HomePage VARCHAR(300)
 );

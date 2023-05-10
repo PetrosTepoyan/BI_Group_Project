@@ -1,7 +1,12 @@
 {
     "raw_data" : "raw_data_source.xlsx",
-    "schema" : "dbo",
-    "db" : "Orders_RELATIONAL_DB",
+
+    "schema_dim" : "dbo",
+    "schema_rel" : "dbo",
+
+    "db_dim" : "Orders_DIMENSIONAL_DW",
+    "db_rel" : "Orders_RELATIONAL_DB",
+
     "TABLES" : [
         "Categories",
         "Customers", 

@@ -13,7 +13,7 @@ CREATE TABLE {db}.{schema}.Employees (
   Country VARCHAR(255),
   HomePhone VARCHAR(50),
   Extension VARCHAR(10),
-  Notes TEXT,
+  Notes VARCHAR(500),
   ReportsTo INT,
   PhotoPath VARCHAR(255)
 );
