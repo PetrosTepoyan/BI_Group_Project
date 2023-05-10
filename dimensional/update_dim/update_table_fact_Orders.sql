@@ -23,19 +23,9 @@ using (
         on dim_ter.TerritoryID_SK = DST.TerritoryID_SK_FK
     
 ) AS SRC
-on multiple columns
+on (DST.OrderID_SK = SRC.)
 when not matched
-insert
-
--- CREATE TABLE {db}.{schema}.OrderDetails (
---   OrderID INT NOT NULL,
---   ProductID INT NOT NULL,
---   UnitPrice INT,
---   Quantity INT,
---   Discount INT
--- );
-
-
+insert into 
 
 -- create table fact_Orders (
 -- OrderID_SK int primary key,
@@ -54,3 +44,12 @@ insert
 -- ShipCountry VARCHAR(50),
 -- TerritoryID_SK_FK int foreign key references dim_Territories(TerritoryID_SK)
 -- );
+
+-- CREATE TABLE {db}.{schema}.OrderDetails (
+--   OrderID INT NOT NULL,
+--   ProductID INT NOT NULL,
+--   UnitPrice INT,
+--   Quantity INT,
+--   Discount INT
+-- );
+

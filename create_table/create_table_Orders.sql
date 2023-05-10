@@ -1,11 +1,11 @@
 CREATE TABLE {db}.{schema}.Orders (
   OrderID INT NOT NULL,
-  CustomerID VARCHAR(10),
-  EmployeeID INT,
+  CustomerID_FK VARCHAR(10),
+  EmployeeID_FK INT,
   OrderDate DATE,
   RequiredDate DATE,
   ShippedDate DATE,
-  ShipVia INT,
+  ShipViaID_FK INT,
   Freight DECIMAL(10, 2),
   ShipName VARCHAR(300),
   ShipAddress VARCHAR(300),
@@ -13,5 +13,5 @@ CREATE TABLE {db}.{schema}.Orders (
   ShipRegion VARCHAR(300),
   ShipPostalCode VARCHAR(40),
   ShipCountry VARCHAR(300),
-  TerritoryID INT
+  TerritoryID_FK INT
 );

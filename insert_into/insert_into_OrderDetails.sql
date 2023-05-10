@@ -1,3 +1,3 @@
 INSERT INTO {db}.{schema}.OrderDetails
-    ([OrderID], [ProductID], [UnitPrice], [Quantity], [Discount])
+    ([OrderID_FK], [ProductID_FK], [UnitPrice], [Quantity], [Discount])
     VALUES (?, ?, ?, ?, ?);

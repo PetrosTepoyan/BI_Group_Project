@@ -101,15 +101,6 @@ def create_dim_table(cursor, table_name, scd_type, db, schema):
 
     print("The {schema}.dim_{table_name}_{scd_type} table from the database {db} has been created\n".format(db=db, schema=schema, scd_type = scd_type, table_name=table_name))
 
-def create_procedure(cursor, on_table, scd_type, db_dim, db_rel, schema_dim, schema_rel):
-    create_procedure_script = load_query('create_procedure_{on_table}_{scd_type}_ETL'.format(on_table = on_table, scd_type = scd_type), "dimensional/etl_procedures").format(
-        db_dim = db_dim, db_rel = db_rel, schema_dim = schema_dim, schema_rel = schema_rel, scd_type = scd_type
-    )
-    cursor.execute(create_procedure_script)
-    cursor.commit()
-
-    print(f"Created procedure {on_table}_{scd_type}_ETL\n")
-
 def drop_dim_table_if_exists(cursor, table_name, scd_type, db, schema):
     table_name_full = "dim_" + table_name + "_" + scd_type
     drop_table_script = load_query('drop_table', None).format(db=db, schema=schema, table=table_name_full)
@@ -117,18 +108,10 @@ def drop_dim_table_if_exists(cursor, table_name, scd_type, db, schema):
     cursor.commit()
     print("The {schema}.{table_name_full} table from the database {db} has been dropped".format(db=db, schema=schema, table_name_full=table_name_full))
 
-def drop_procedure_if_exists(cursor, table_name, scd_type):
-    procedure_name = f"{table_name}_{scd_type}_ETL"
-    drop_procedure_script = load_query('drop_procedure').format(
-        procedure_name = procedure_name
-    )
-    cursor.execute(drop_procedure_script)
-    cursor.commit()
-
-    print(f"Dropped procedure {procedure_name}")
-
-def update_dim_table(cursor, table_name, scd_type):
-    update_dim_table_script = load_query('update_table_dim_{table_name}_{scd_type}'.format(table_name = table_name, scd_type = scd_type), "dimensional/update_dim")
+def update_dim_table(cursor, table_name, scd_type, db_dim, db_rel, schema_dim, schema_rel):
+    update_dim_table_script = load_query(
+        'update_table_dim_{table_name}_{scd_type}'.format(table_name = table_name, scd_type = scd_type), "dimensional/update_dim"
+    ).format(db_dim = db_dim, db_rel = db_rel, schema_dim = schema_dim, schema_rel = schema_rel)
     
     print(f"Executing {table_name}_{scd_type}_ETL...")
     cursor.execute(update_dim_table_script)
