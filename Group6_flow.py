@@ -37,11 +37,11 @@ if __name__ == "__main__":
     for table, SCD_type in SCD_types.items():
         
         tasks.drop_dim_table_if_exists(conn_DW, table, SCD_type, db_dim, schema_dim)
-        
         tasks.create_dim_table(conn_DW, table, SCD_type, db_dim, schema_dim)
         
         tasks.drop_procedure_if_exists(conn_DW, table, SCD_type)
         tasks.create_procedure(conn_DW, table, SCD_type, db_dim, db_rel, schema_dim, schema_rel)
+        
         tasks.update_dim_table(conn_DW, table, SCD_type)
 
 

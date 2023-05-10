@@ -18,7 +18,7 @@ CREATE TABLE {db}.{schema}.[Products_SCD4_History]
 DROP TABLE IF EXISTS {db}.{schema}.[Products_SCD4];
 
 CREATE TABLE {db}.{schema}.[Products_SCD4](
- [ProductSK] [int] IDENTITY(1,1) NOT NULL,
+ [ProductID_SK] [int] IDENTITY(1,1) NOT NULL,
  [BusinessKey] [int] NOT NULL,
  [ProductName] [VARCHAR](50) NULL,
  [QuantityPerUnit] [VARCHAR](50) NULL,

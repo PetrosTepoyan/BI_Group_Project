@@ -7,6 +7,8 @@
     "db_dim" : "Orders_DIMENSIONAL_DW",
     "db_rel" : "Orders_RELATIONAL_DB",
 
+    "db_master" : "master",
+
     "TABLES" : [
         "Categories",
         "Customers", 
