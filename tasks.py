@@ -152,6 +152,7 @@ def create_fact_table(cursor, table_name, db, schema):
     cursor.commit()
 
     print("The {schema}.{table_name} table from the database {db} has been created".format(db=db, schema=schema, table_name=table_name))
+    logging.info("The {schema}.{table_name} table from the database {db} has been created".format(db=db, schema=schema, table_name=table_name))
 
 
 def update_fact_table(cursor, table_name, db_dim, db_rel, schema_dim, schema_rel):
@@ -163,6 +164,7 @@ def update_fact_table(cursor, table_name, db_dim, db_rel, schema_dim, schema_rel
     cursor.commit()
 
     print("The {schema_dim}.{table_name} table from the database {db_dim} has been updated".format(db_dim=db_dim, schema_dim=schema_dim, table_name=table_name))
+    logging.info("The {schema_dim}.{table_name} table from the database {db_dim} has been updated".format(db_dim=db_dim, schema_dim=schema_dim, table_name=table_name))
 
 def drop_fact_table_if_exists(cursor, table_name, db, schema):
     table_name_full = "fact_" + table_name
@@ -170,3 +172,4 @@ def drop_fact_table_if_exists(cursor, table_name, db, schema):
     cursor.execute(drop_table_script)
     cursor.commit()
     print("The {schema}.{table_name_full} table from the database {db} has been dropped".format(db=db, schema=schema, table_name_full=table_name_full))
+    logging.info("The {schema}.{table_name_full} table from the database {db} has been dropped".format(db=db, schema=schema, table_name_full=table_name_full))
