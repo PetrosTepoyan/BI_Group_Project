@@ -119,7 +119,17 @@ def update_dim_table(cursor, table_name, scd_type, db_dim, db_rel, schema_dim, s
 
     print(f"Updated dim table {table_name}_{scd_type}\n")
 
-def 
+def create_fact_table(cursor, table_name, db, schema):
+    create_fact_table_script = load_query(
+        'create_table_fact_{table_name}'.format(table_name = table_name), "dimensional"
+    ).format(db_dim = db_dim, db_rel = db_rel, schema_dim = schema_dim, schema_rel = schema_rel)
+    
+    print(f"Executing {table_name}_{scd_type}_ETL...")
+    cursor.execute(update_dim_table_script)
+    cursor.commit()
+
+    print(f"Updated dim table {table_name}_{scd_type}\n")
+
 
 def update_fact_table(cursor, table_name, db, schema):
     

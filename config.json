@@ -21,6 +21,7 @@
         "Orders",
         "OrderDetails"
     ],
+
     "SCD" : {
         "Categories" : "SCD3",
         "Customers" : "SCD3",
@@ -30,5 +31,9 @@
         "Shippers" : "SCD3",
         "Suppliers" : "SCD1_with_delete",
         "Territories" : "SCD3"
-    }
+    },
+
+    "FACT_TABLES": [
+        "Orders"
+    ]
 }
