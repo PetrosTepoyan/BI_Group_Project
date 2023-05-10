@@ -18,7 +18,7 @@ DECLARE  @Products_SCD4 TABLE
 
 
 -- Merge statement
-MERGE		{db_dim}.{schema_dim}.Products_SCD4				AS DST
+MERGE		{db_dim}.{schema_dim}.dim_Products_SCD4				AS DST
 USING		{db_rel}.{schema_rel}.Products				AS SRC
 ON			(SRC.ProductID = DST.BusinessKey)
 
@@ -59,7 +59,7 @@ UPDATE		TP4
 
 SET			TP4.ValidTo = CONVERT (DATE, GETDATE())
 
-FROM		{db_dim}.{schema_dim}.Products_SCD4_History TP4
+FROM		{db_dim}.{schema_dim}.dim_Products_SCD4_History TP4
 			INNER JOIN @Products_SCD4 TMP
 			ON TP4.BusinessKey = TMP.BusinessKey
 
@@ -68,7 +68,7 @@ WHERE		TP4.ValidTo IS NULL
 
 -- Add latest history records to history table
 
-INSERT INTO {db_dim}.{schema_dim}.Products_SCD4_History (BusinessKey, ProductName, QuantityPerUnit, UnitPrice, UnitsInStock, UnitsOnOrder, ReorderLevel, Discontinued, ValidFrom, ValidTo)
+INSERT INTO {db_dim}.{schema_dim}.dim_Products_SCD4_History (BusinessKey, ProductName, QuantityPerUnit, UnitPrice, UnitsInStock, UnitsOnOrder, ReorderLevel, Discontinued, ValidFrom, ValidTo)
 
 SELECT BusinessKey, ProductName, QuantityPerUnit, UnitPrice, UnitsInStock, UnitsOnOrder, ReorderLevel, Discontinued, ValidFrom, GETDATE()
 FROM @Products_SCD4

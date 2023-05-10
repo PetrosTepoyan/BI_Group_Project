@@ -1,6 +1,6 @@
-DROP TABLE IF EXISTS {db}.{schema}.[Products_SCD4_History];
+DROP TABLE IF EXISTS {db}.{schema}.[dim_Products_SCD4_History];
 
-CREATE TABLE {db}.{schema}.[Products_SCD4_History]
+CREATE TABLE {db}.{schema}.[dim_Products_SCD4_History]
 (
  [HistoryID] [int] IDENTITY(1,1) NOT NULL,
  [BusinessKey] [int] NULL,
@@ -15,10 +15,10 @@ CREATE TABLE {db}.{schema}.[Products_SCD4_History]
  [ValidTo] [datetime] NULL
 )
 
-DROP TABLE IF EXISTS {db}.{schema}.[Products_SCD4];
+DROP TABLE IF EXISTS {db}.{schema}.[dim_Products_SCD4];
 
-CREATE TABLE {db}.{schema}.[Products_SCD4](
- [ProductID_SK] [int] IDENTITY(1,1) NOT NULL,
+CREATE TABLE {db}.{schema}.[dim_Products_SCD4](
+ [ProductID_SK] [int] IDENTITY(1,1) PRIMARY KEY,
  [BusinessKey] [int] NOT NULL,
  [ProductName] [VARCHAR](50) NULL,
  [QuantityPerUnit] [VARCHAR](50) NULL,

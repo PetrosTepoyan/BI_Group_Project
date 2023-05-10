@@ -18,3 +18,5 @@ drop procedure Categories_SCD3_ETL;
 drop table dbo.dim_Categories_SCD3
 
 select * from dbo.dim_Employees_SCD2;
+
+select * from dbo.fact_Orders;

@@ -14,4 +14,3 @@ CREATE TABLE {db}.{schema}.dim_Customers_SCD3 (
 	[ContactTitle_Prev1] [varchar](50) NULL,
 	[ContactTitle_Prev1_ValidTo] [char] (8) NULL
 );
-# FIXME

@@ -1,5 +1,5 @@
 CREATE TABLE {db}.{schema}.dim_Employees_SCD2(
-EmployeeID_SK int IDENTITY(1,1) NOT NULL,
+EmployeeID_SK int IDENTITY(1,1) PRIMARY KEY,
 BusinessKey int NOT NULL,
 LastName VARCHAR(50),
 FirstName VARCHAR(50),
@@ -19,4 +19,4 @@ PhotoPath VARCHAR(50),
 ValidFrom INT NULL,
 ValidTo INT NULL,
 IsCurrent BIT NULL
-) ON [PRIMARY];
+);

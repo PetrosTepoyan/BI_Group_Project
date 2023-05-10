@@ -113,7 +113,7 @@ def update_dim_table(cursor, table_name, scd_type, db_dim, db_rel, schema_dim, s
         'update_table_dim_{table_name}_{scd_type}'.format(table_name = table_name, scd_type = scd_type), "dimensional/update_dim"
     ).format(db_dim = db_dim, db_rel = db_rel, schema_dim = schema_dim, schema_rel = schema_rel)
     
-    print(f"Executing {table_name}_{scd_type}_ETL...")
+    print(f"Executing {table_name}_{scd_type}...")
     cursor.execute(update_dim_table_script)
     cursor.commit()
 
@@ -122,14 +122,28 @@ def update_dim_table(cursor, table_name, scd_type, db_dim, db_rel, schema_dim, s
 def create_fact_table(cursor, table_name, db, schema):
     create_fact_table_script = load_query(
         'create_table_fact_{table_name}'.format(table_name = table_name), "dimensional"
-    ).format(db_dim = db_dim, db_rel = db_rel, schema_dim = schema_dim, schema_rel = schema_rel)
+    ).format(db = db, schema = schema)
     
-    print(f"Executing {table_name}_{scd_type}_ETL...")
-    cursor.execute(update_dim_table_script)
+    cursor.execute(create_fact_table_script)
     cursor.commit()
 
-    print(f"Updated dim table {table_name}_{scd_type}\n")
+    print("The {schema}.{table_name} table from the database {db} has been created".format(db=db, schema=schema, table_name=table_name))
 
 
-def update_fact_table(cursor, table_name, db, schema):
+def update_fact_table(cursor, table_name, db_dim, db_rel, schema_dim, schema_rel):
+    udpate_fact_table_script = load_query(
+        'update_table_fact_{table_name}'.format(table_name = table_name), "dimensional"
+    ).format(db_dim = db_dim, db_rel = db_rel, schema_dim = schema_dim, schema_rel = schema_rel)
+    
+    cursor.execute(udpate_fact_table_script)
+    cursor.commit()
+
+    print("The {schema_dim}.{table_name} table from the database {db_dim} has been updated".format(db_dim=db_dim, schema_dim=schema_dim, table_name=table_name))
+
+def drop_fact_table_if_exists(cursor, table_name, db, schema):
+    table_name_full = "fact_" + table_name
+    drop_table_script = load_query('drop_table', None).format(db=db, schema=schema, table=table_name_full)
+    cursor.execute(drop_table_script)
+    cursor.commit()
+    print("The {schema}.{table_name_full} table from the database {db} has been dropped".format(db=db, schema=schema, table_name_full=table_name_full))
     
