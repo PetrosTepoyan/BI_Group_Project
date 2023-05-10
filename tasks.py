@@ -119,5 +119,7 @@ def update_dim_table(cursor, table_name, scd_type, db_dim, db_rel, schema_dim, s
 
     print(f"Updated dim table {table_name}_{scd_type}\n")
 
+def 
+
 def update_fact_table(cursor, table_name, db, schema):
-    pass
+    
