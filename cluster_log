@@ -105,3 +105,218 @@
 2023-05-10 18:14:29,053:INFO:Connecting to database
 2023-05-10 18:14:29,053:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
 2023-05-10 18:14:29,072:INFO:Connected to database
+2023-05-10 19:16:06,016:INFO:Connecting to database
+2023-05-10 19:16:06,018:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 19:16:06,163:INFO:Connected to database
+2023-05-10 19:16:06,167:INFO:Connecting to database
+2023-05-10 19:16:06,167:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 19:16:06,195:INFO:Connected to database
+2023-05-10 19:16:06,200:INFO:Connecting to database
+2023-05-10 19:16:06,200:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 19:16:06,228:INFO:Connected to database
+2023-05-10 19:16:06,233:INFO:Connecting to database
+2023-05-10 19:16:06,233:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 19:16:06,260:INFO:Connected to database
+2023-05-10 19:16:06,264:INFO:Connecting to database
+2023-05-10 19:16:06,264:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 19:16:06,289:INFO:Connected to database
+2023-05-10 19:16:06,292:INFO:Connecting to database
+2023-05-10 19:16:06,292:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 19:16:06,318:INFO:Connected to database
+2023-05-10 19:16:06,321:INFO:Connecting to database
+2023-05-10 19:16:06,321:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 19:16:06,344:INFO:Connected to database
+2023-05-10 19:16:06,346:INFO:Connecting to database
+2023-05-10 19:16:06,346:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 19:16:06,365:INFO:Connected to database
+2023-05-10 19:17:47,378:INFO:Connecting to database
+2023-05-10 19:17:47,379:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 19:17:47,436:INFO:Connected to database
+2023-05-10 19:17:47,440:INFO:Connecting to database
+2023-05-10 19:17:47,440:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 19:17:47,476:INFO:Connected to database
+2023-05-10 19:17:47,479:INFO:Connecting to database
+2023-05-10 19:17:47,479:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 19:17:47,513:INFO:Connected to database
+2023-05-10 19:17:47,516:INFO:Connecting to database
+2023-05-10 19:17:47,516:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 19:17:47,546:INFO:Connected to database
+2023-05-10 19:17:47,550:INFO:Connecting to database
+2023-05-10 19:17:47,550:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 19:17:47,580:INFO:Connected to database
+2023-05-10 19:17:47,582:INFO:Connecting to database
+2023-05-10 19:17:47,582:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 19:17:47,611:INFO:Connected to database
+2023-05-10 19:17:47,613:INFO:Connecting to database
+2023-05-10 19:17:47,613:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 19:17:47,637:INFO:Connected to database
+2023-05-10 19:17:47,639:INFO:Connecting to database
+2023-05-10 19:17:47,640:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 19:17:47,663:INFO:Connected to database
+2023-05-10 19:19:19,935:INFO:Connecting to database
+2023-05-10 19:19:19,936:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=master;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 19:19:20,031:INFO:Connected to database
+2023-05-10 19:19:20,217:INFO:Dropped databases
+2023-05-10 19:19:21,141:INFO:Created databases
+2023-05-10 19:19:21,156:INFO:Connecting to database
+2023-05-10 19:19:21,156:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_RELATIONAL_DB;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 19:19:21,207:INFO:Connected to database
+2023-05-10 19:19:21,216:INFO:Created databases
+2023-05-10 19:19:21,224:INFO:The dbo.Categories table from the database Orders_RELATIONAL_DB has been dropped
+2023-05-10 19:19:21,228:INFO:The dbo.Categories table from the database Orders_RELATIONAL_DB has been created
+2023-05-10 19:19:21,424:INFO:The dbo.Customers table from the database Orders_RELATIONAL_DB has been dropped
+2023-05-10 19:19:21,427:INFO:The dbo.Customers table from the database Orders_RELATIONAL_DB has been created
+2023-05-10 19:19:21,844:INFO:The dbo.Employees table from the database Orders_RELATIONAL_DB has been dropped
+2023-05-10 19:19:21,848:INFO:The dbo.Employees table from the database Orders_RELATIONAL_DB has been created
+2023-05-10 19:19:21,926:INFO:The dbo.Suppliers table from the database Orders_RELATIONAL_DB has been dropped
+2023-05-10 19:19:21,929:INFO:The dbo.Suppliers table from the database Orders_RELATIONAL_DB has been created
+2023-05-10 19:19:22,085:INFO:The dbo.Products table from the database Orders_RELATIONAL_DB has been dropped
+2023-05-10 19:19:22,089:INFO:The dbo.Products table from the database Orders_RELATIONAL_DB has been created
+2023-05-10 19:19:22,367:INFO:The dbo.Region table from the database Orders_RELATIONAL_DB has been dropped
+2023-05-10 19:19:22,370:INFO:The dbo.Region table from the database Orders_RELATIONAL_DB has been created
+2023-05-10 19:19:22,431:INFO:The dbo.Shippers table from the database Orders_RELATIONAL_DB has been dropped
+2023-05-10 19:19:22,434:INFO:The dbo.Shippers table from the database Orders_RELATIONAL_DB has been created
+2023-05-10 19:19:22,467:INFO:The dbo.Territories table from the database Orders_RELATIONAL_DB has been dropped
+2023-05-10 19:19:22,469:INFO:The dbo.Territories table from the database Orders_RELATIONAL_DB has been created
+2023-05-10 19:19:22,646:INFO:The dbo.Orders table from the database Orders_RELATIONAL_DB has been dropped
+2023-05-10 19:19:22,649:INFO:The dbo.Orders table from the database Orders_RELATIONAL_DB has been created
+2023-05-10 19:19:25,344:INFO:The dbo.OrderDetails table from the database Orders_RELATIONAL_DB has been dropped
+2023-05-10 19:19:25,348:INFO:The dbo.OrderDetails table from the database Orders_RELATIONAL_DB has been created
+2023-05-10 19:19:30,351:INFO:Added primary key constraints
+2023-05-10 19:19:30,405:INFO:Added foriegn key constraints
+2023-05-10 19:19:30,418:INFO:Connecting to database
+2023-05-10 19:19:30,418:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 19:19:30,446:INFO:Connected to database
+2023-05-10 19:19:30,448:INFO:The dbo.dim_Categories_SCD3 table from the database Orders_DIMENSIONAL_DW has been dropped
+2023-05-10 19:19:30,452:INFO:The dbo.dim_Categories_SCD3 table from the database Orders_DIMENSIONAL_DW has been created
+
+2023-05-10 19:19:30,460:INFO:Updated dim table Categories_SCD3
+
+2023-05-10 19:19:30,461:INFO:The dbo.dim_Customers_SCD3 table from the database Orders_DIMENSIONAL_DW has been dropped
+2023-05-10 19:19:30,464:INFO:The dbo.dim_Customers_SCD3 table from the database Orders_DIMENSIONAL_DW has been created
+
+2023-05-10 19:19:30,472:INFO:Updated dim table Customers_SCD3
+
+2023-05-10 19:19:30,474:INFO:The dbo.dim_Employees_SCD2 table from the database Orders_DIMENSIONAL_DW has been dropped
+2023-05-10 19:19:30,477:INFO:The dbo.dim_Employees_SCD2 table from the database Orders_DIMENSIONAL_DW has been created
+
+2023-05-10 19:19:30,546:INFO:Updated dim table Employees_SCD2
+
+2023-05-10 19:19:30,548:INFO:The dbo.dim_Products_SCD4 table from the database Orders_DIMENSIONAL_DW has been dropped
+2023-05-10 19:19:30,553:INFO:The dbo.dim_Products_SCD4 table from the database Orders_DIMENSIONAL_DW has been created
+
+2023-05-10 19:19:30,574:INFO:Updated dim table Products_SCD4
+
+2023-05-10 19:19:30,575:INFO:The dbo.dim_Region_SCD1_with_delete table from the database Orders_DIMENSIONAL_DW has been dropped
+2023-05-10 19:19:30,578:INFO:The dbo.dim_Region_SCD1_with_delete table from the database Orders_DIMENSIONAL_DW has been created
+
+2023-05-10 19:19:30,586:INFO:Updated dim table Region_SCD1_with_delete
+
+2023-05-10 19:19:30,587:INFO:The dbo.dim_Shippers_SCD3 table from the database Orders_DIMENSIONAL_DW has been dropped
+2023-05-10 19:19:30,590:INFO:The dbo.dim_Shippers_SCD3 table from the database Orders_DIMENSIONAL_DW has been created
+
+2023-05-10 19:19:30,597:INFO:Updated dim table Shippers_SCD3
+
+2023-05-10 19:19:30,598:INFO:The dbo.dim_Suppliers_SCD1_with_delete table from the database Orders_DIMENSIONAL_DW has been dropped
+2023-05-10 19:19:30,601:INFO:The dbo.dim_Suppliers_SCD1_with_delete table from the database Orders_DIMENSIONAL_DW has been created
+
+2023-05-10 19:19:30,612:INFO:Updated dim table Suppliers_SCD1_with_delete
+
+2023-05-10 19:19:30,614:INFO:The dbo.dim_Territories_SCD3 table from the database Orders_DIMENSIONAL_DW has been dropped
+2023-05-10 19:19:30,616:INFO:The dbo.dim_Territories_SCD3 table from the database Orders_DIMENSIONAL_DW has been created
+
+2023-05-10 19:19:30,629:INFO:Updated dim table Territories_SCD3
+
+2023-05-10 19:19:30,727:INFO:Connecting to database
+2023-05-10 19:19:30,727:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_RELATIONAL_DB;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 19:19:30,757:INFO:Connected to database
+2023-05-10 19:19:30,768:INFO:Connecting to database
+2023-05-10 19:19:30,768:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 19:19:30,789:INFO:Connected to database
+2023-05-10 19:19:30,791:INFO:Connecting to database
+2023-05-10 19:19:30,791:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 19:19:30,811:INFO:Connected to database
+2023-05-10 19:19:30,814:INFO:Connecting to database
+2023-05-10 19:19:30,814:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 19:19:30,833:INFO:Connected to database
+2023-05-10 19:19:30,836:INFO:Connecting to database
+2023-05-10 19:19:30,836:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 19:19:30,855:INFO:Connected to database
+2023-05-10 19:19:30,859:INFO:Connecting to database
+2023-05-10 19:19:30,859:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 19:19:30,877:INFO:Connected to database
+2023-05-10 19:19:30,880:INFO:Connecting to database
+2023-05-10 19:19:30,880:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 19:19:30,899:INFO:Connected to database
+2023-05-10 19:19:30,901:INFO:Connecting to database
+2023-05-10 19:19:30,901:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 19:19:30,919:INFO:Connected to database
+2023-05-10 19:19:30,922:INFO:Connecting to database
+2023-05-10 19:19:30,922:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 19:19:30,941:INFO:Connected to database
+2023-05-10 19:19:30,948:INFO:Connecting to database
+2023-05-10 19:19:30,948:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 19:19:30,968:INFO:Connected to database
+2023-05-10 19:19:30,989:INFO:Connecting to database
+2023-05-10 19:19:30,989:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 19:19:31,008:INFO:Connected to database
+2023-05-10 19:22:50,573:INFO:Connecting to database
+2023-05-10 19:22:50,573:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 19:22:50,626:INFO:Connected to database
+2023-05-10 19:22:50,630:INFO:Connecting to database
+2023-05-10 19:22:50,630:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 19:22:50,664:INFO:Connected to database
+2023-05-10 19:22:50,668:INFO:Connecting to database
+2023-05-10 19:22:50,668:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 19:22:50,701:INFO:Connected to database
+2023-05-10 19:22:50,704:INFO:Connecting to database
+2023-05-10 19:22:50,705:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 19:22:50,737:INFO:Connected to database
+2023-05-10 19:22:50,741:INFO:Connecting to database
+2023-05-10 19:22:50,741:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 19:22:50,769:INFO:Connected to database
+2023-05-10 19:22:50,771:INFO:Connecting to database
+2023-05-10 19:22:50,771:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 19:22:50,799:INFO:Connected to database
+2023-05-10 19:22:50,802:INFO:Connecting to database
+2023-05-10 19:22:50,802:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 19:22:50,827:INFO:Connected to database
+2023-05-10 19:22:50,829:INFO:Connecting to database
+2023-05-10 19:22:50,829:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 19:22:50,853:INFO:Connected to database
+2023-05-10 19:22:50,918:INFO:Connecting to database
+2023-05-10 19:22:50,918:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 19:22:50,952:INFO:Connected to database
+2023-05-10 19:22:51,245:INFO:Connecting to database
+2023-05-10 19:22:51,245:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 19:22:51,294:INFO:Connected to database
+2023-05-10 19:23:05,788:INFO:Connecting to database
+2023-05-10 19:23:05,789:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 19:23:05,838:INFO:Connected to database
+2023-05-10 19:23:05,842:INFO:Connecting to database
+2023-05-10 19:23:05,842:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 19:23:05,872:INFO:Connected to database
+2023-05-10 19:23:05,874:INFO:Connecting to database
+2023-05-10 19:23:05,874:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 19:23:05,893:INFO:Connected to database
+2023-05-10 19:23:05,894:INFO:Connecting to database
+2023-05-10 19:23:05,895:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 19:23:05,915:INFO:Connected to database
+2023-05-10 19:23:05,918:INFO:Connecting to database
+2023-05-10 19:23:05,918:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 19:23:05,940:INFO:Connected to database
+2023-05-10 19:23:05,941:INFO:Connecting to database
+2023-05-10 19:23:05,941:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 19:23:05,960:INFO:Connected to database
+2023-05-10 19:23:05,961:INFO:Connecting to database
+2023-05-10 19:23:05,961:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 19:23:05,980:INFO:Connected to database
+2023-05-10 19:23:05,982:INFO:Connecting to database
+2023-05-10 19:23:05,983:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 19:23:06,005:INFO:Connected to database
+2023-05-10 19:23:06,011:INFO:Connecting to database
+2023-05-10 19:23:06,011:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 19:23:06,037:INFO:Connected to database
+2023-05-10 19:23:07,744:INFO:Connecting to database
+2023-05-10 19:23:07,745:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 19:23:07,795:INFO:Connected to database
