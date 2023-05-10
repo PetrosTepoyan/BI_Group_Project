@@ -10,7 +10,7 @@ import utils
 from utils import __format_nan, __float_none
 
 
-logging.basicConfig(filename='sample.log', level=logging.DEBUG,
+logging.basicConfig(filename='cluster_log', level=logging.DEBUG,
                     format='%(asctime)s:%(levelname)s:%(message)s')
 
 def connect_to(database):
@@ -170,4 +170,3 @@ def drop_fact_table_if_exists(cursor, table_name, db, schema):
     cursor.execute(drop_table_script)
     cursor.commit()
     print("The {schema}.{table_name_full} table from the database {db} has been dropped".format(db=db, schema=schema, table_name_full=table_name_full))
-    

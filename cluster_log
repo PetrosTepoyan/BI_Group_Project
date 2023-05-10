@@ -1,0 +1,107 @@
+2023-05-10 18:14:17,882:INFO:Connecting to database
+2023-05-10 18:14:17,882:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=master;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 18:14:17,937:INFO:Connected to database
+2023-05-10 18:14:18,101:INFO:Dropped databases
+2023-05-10 18:14:18,930:INFO:Created databases
+2023-05-10 18:14:18,944:INFO:Connecting to database
+2023-05-10 18:14:18,944:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_RELATIONAL_DB;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 18:14:18,994:INFO:Connected to database
+2023-05-10 18:14:18,997:INFO:Created databases
+2023-05-10 18:14:19,002:INFO:The dbo.Categories table from the database Orders_RELATIONAL_DB has been dropped
+2023-05-10 18:14:19,006:INFO:The dbo.Categories table from the database Orders_RELATIONAL_DB has been created
+2023-05-10 18:14:19,229:INFO:The dbo.Customers table from the database Orders_RELATIONAL_DB has been dropped
+2023-05-10 18:14:19,233:INFO:The dbo.Customers table from the database Orders_RELATIONAL_DB has been created
+2023-05-10 18:14:19,670:INFO:The dbo.Employees table from the database Orders_RELATIONAL_DB has been dropped
+2023-05-10 18:14:19,673:INFO:The dbo.Employees table from the database Orders_RELATIONAL_DB has been created
+2023-05-10 18:14:19,771:INFO:The dbo.Suppliers table from the database Orders_RELATIONAL_DB has been dropped
+2023-05-10 18:14:19,773:INFO:The dbo.Suppliers table from the database Orders_RELATIONAL_DB has been created
+2023-05-10 18:14:19,934:INFO:The dbo.Products table from the database Orders_RELATIONAL_DB has been dropped
+2023-05-10 18:14:19,937:INFO:The dbo.Products table from the database Orders_RELATIONAL_DB has been created
+2023-05-10 18:14:20,219:INFO:The dbo.Region table from the database Orders_RELATIONAL_DB has been dropped
+2023-05-10 18:14:20,224:INFO:The dbo.Region table from the database Orders_RELATIONAL_DB has been created
+2023-05-10 18:14:20,288:INFO:The dbo.Shippers table from the database Orders_RELATIONAL_DB has been dropped
+2023-05-10 18:14:20,291:INFO:The dbo.Shippers table from the database Orders_RELATIONAL_DB has been created
+2023-05-10 18:14:20,329:INFO:The dbo.Territories table from the database Orders_RELATIONAL_DB has been dropped
+2023-05-10 18:14:20,331:INFO:The dbo.Territories table from the database Orders_RELATIONAL_DB has been created
+2023-05-10 18:14:20,481:INFO:The dbo.Orders table from the database Orders_RELATIONAL_DB has been dropped
+2023-05-10 18:14:20,485:INFO:The dbo.Orders table from the database Orders_RELATIONAL_DB has been created
+2023-05-10 18:14:23,680:INFO:The dbo.OrderDetails table from the database Orders_RELATIONAL_DB has been dropped
+2023-05-10 18:14:23,684:INFO:The dbo.OrderDetails table from the database Orders_RELATIONAL_DB has been created
+2023-05-10 18:14:28,350:INFO:Added primary key constraints
+2023-05-10 18:14:28,404:INFO:Added foriegn key constraints
+2023-05-10 18:14:28,423:INFO:Connecting to database
+2023-05-10 18:14:28,423:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 18:14:28,471:INFO:Connected to database
+2023-05-10 18:14:28,474:INFO:The dbo.dim_Categories_SCD3 table from the database Orders_DIMENSIONAL_DW has been dropped
+2023-05-10 18:14:28,478:INFO:The dbo.dim_Categories_SCD3 table from the database Orders_DIMENSIONAL_DW has been created
+
+2023-05-10 18:14:28,485:INFO:Updated dim table Categories_SCD3
+
+2023-05-10 18:14:28,487:INFO:The dbo.dim_Customers_SCD3 table from the database Orders_DIMENSIONAL_DW has been dropped
+2023-05-10 18:14:28,490:INFO:The dbo.dim_Customers_SCD3 table from the database Orders_DIMENSIONAL_DW has been created
+
+2023-05-10 18:14:28,500:INFO:Updated dim table Customers_SCD3
+
+2023-05-10 18:14:28,502:INFO:The dbo.dim_Employees_SCD2 table from the database Orders_DIMENSIONAL_DW has been dropped
+2023-05-10 18:14:28,506:INFO:The dbo.dim_Employees_SCD2 table from the database Orders_DIMENSIONAL_DW has been created
+
+2023-05-10 18:14:28,587:INFO:Updated dim table Employees_SCD2
+
+2023-05-10 18:14:28,590:INFO:The dbo.dim_Products_SCD4 table from the database Orders_DIMENSIONAL_DW has been dropped
+2023-05-10 18:14:28,595:INFO:The dbo.dim_Products_SCD4 table from the database Orders_DIMENSIONAL_DW has been created
+
+2023-05-10 18:14:28,618:INFO:Updated dim table Products_SCD4
+
+2023-05-10 18:14:28,621:INFO:The dbo.dim_Region_SCD1_with_delete table from the database Orders_DIMENSIONAL_DW has been dropped
+2023-05-10 18:14:28,626:INFO:The dbo.dim_Region_SCD1_with_delete table from the database Orders_DIMENSIONAL_DW has been created
+
+2023-05-10 18:14:28,639:INFO:Updated dim table Region_SCD1_with_delete
+
+2023-05-10 18:14:28,642:INFO:The dbo.dim_Shippers_SCD3 table from the database Orders_DIMENSIONAL_DW has been dropped
+2023-05-10 18:14:28,646:INFO:The dbo.dim_Shippers_SCD3 table from the database Orders_DIMENSIONAL_DW has been created
+
+2023-05-10 18:14:28,656:INFO:Updated dim table Shippers_SCD3
+
+2023-05-10 18:14:28,657:INFO:The dbo.dim_Suppliers_SCD1_with_delete table from the database Orders_DIMENSIONAL_DW has been dropped
+2023-05-10 18:14:28,661:INFO:The dbo.dim_Suppliers_SCD1_with_delete table from the database Orders_DIMENSIONAL_DW has been created
+
+2023-05-10 18:14:28,674:INFO:Updated dim table Suppliers_SCD1_with_delete
+
+2023-05-10 18:14:28,676:INFO:The dbo.dim_Territories_SCD3 table from the database Orders_DIMENSIONAL_DW has been dropped
+2023-05-10 18:14:28,680:INFO:The dbo.dim_Territories_SCD3 table from the database Orders_DIMENSIONAL_DW has been created
+
+2023-05-10 18:14:28,694:INFO:Updated dim table Territories_SCD3
+
+2023-05-10 18:14:28,794:INFO:Connecting to database
+2023-05-10 18:14:28,795:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_RELATIONAL_DB;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 18:14:28,822:INFO:Connected to database
+2023-05-10 18:14:28,832:INFO:Connecting to database
+2023-05-10 18:14:28,832:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 18:14:28,852:INFO:Connected to database
+2023-05-10 18:14:28,855:INFO:Connecting to database
+2023-05-10 18:14:28,855:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 18:14:28,873:INFO:Connected to database
+2023-05-10 18:14:28,881:INFO:Connecting to database
+2023-05-10 18:14:28,881:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 18:14:28,899:INFO:Connected to database
+2023-05-10 18:14:28,902:INFO:Connecting to database
+2023-05-10 18:14:28,902:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 18:14:28,921:INFO:Connected to database
+2023-05-10 18:14:28,925:INFO:Connecting to database
+2023-05-10 18:14:28,925:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 18:14:28,943:INFO:Connected to database
+2023-05-10 18:14:28,946:INFO:Connecting to database
+2023-05-10 18:14:28,946:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 18:14:28,965:INFO:Connected to database
+2023-05-10 18:14:28,968:INFO:Connecting to database
+2023-05-10 18:14:28,968:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 18:14:28,985:INFO:Connected to database
+2023-05-10 18:14:28,988:INFO:Connecting to database
+2023-05-10 18:14:28,988:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 18:14:29,007:INFO:Connected to database
+2023-05-10 18:14:29,014:INFO:Connecting to database
+2023-05-10 18:14:29,014:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 18:14:29,032:INFO:Connected to database
+2023-05-10 18:14:29,053:INFO:Connecting to database
+2023-05-10 18:14:29,053:INFO:Connection string: DRIVER=/opt/homebrew/lib/libmsodbcsql.18.dylib;SERVER=localhost,1433;DATABASE=Orders_DIMENSIONAL_DW;TrustServerCertificate=yes;UID=sa;PWD=bigStrong1234Password!re
+2023-05-10 18:14:29,072:INFO:Connected to database
